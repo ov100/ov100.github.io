@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.04277f03.js" as="script"><link rel="preload" href="/assets/js/2.1bea7c4b.js" as="script"><link rel="preload" href="/assets/js/13.b8e7eb0d.js" as="script"><link rel="prefetch" href="/assets/js/10.5dc94777.js"><link rel="prefetch" href="/assets/js/11.61d5706f.js"><link rel="prefetch" href="/assets/js/12.16cb75f0.js"><link rel="prefetch" href="/assets/js/3.7888b958.js"><link rel="prefetch" href="/assets/js/4.00c04b5f.js"><link rel="prefetch" href="/assets/js/5.14597a40.js"><link rel="prefetch" href="/assets/js/6.b2615aea.js"><link rel="prefetch" href="/assets/js/7.84b06d94.js"><link rel="prefetch" href="/assets/js/8.e8871936.js"><link rel="prefetch" href="/assets/js/9.bf4c91ab.js">
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.da9c1cde.js" as="script"><link rel="preload" href="/assets/js/2.1bea7c4b.js" as="script"><link rel="preload" href="/assets/js/13.dc592298.js" as="script"><link rel="prefetch" href="/assets/js/10.935f476d.js"><link rel="prefetch" href="/assets/js/11.61d5706f.js"><link rel="prefetch" href="/assets/js/12.16cb75f0.js"><link rel="prefetch" href="/assets/js/3.7888b958.js"><link rel="prefetch" href="/assets/js/4.00c04b5f.js"><link rel="prefetch" href="/assets/js/5.14597a40.js"><link rel="prefetch" href="/assets/js/6.b2615aea.js"><link rel="prefetch" href="/assets/js/7.84b06d94.js"><link rel="prefetch" href="/assets/js/8.f6888b83.js"><link rel="prefetch" href="/assets/js/9.bf4c91ab.js">
     <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
   </head>
   <body>
@@ -29,13 +29,17 @@
 　　订单系统--&gt;MQ--&gt;物流系统;
 　　订单系统--&gt;MQ--&gt;库存系统; 
 </code></pre></div><h3 id="流量削峰"><a href="#流量削峰" class="header-anchor">#</a> 流量削峰</h3> <p>应用系统如果遇到系统请求流量的瞬间猛增，有可能会将系统压垮。有了消息队列可以将大量请求缓存起来，分散到很长一段时间处理，这样可以大大 提到系统的稳定性和用户体验。
-互联网公司的大促场景(双十一、店庆活动、秒杀活动)都会使用到 MQ。</p> <h3 id="数据分发"><a href="#数据分发" class="header-anchor">#</a> 数据分发</h3> <p>通过消息队列可以让数据在多个系统更加之间进行流通。数据的产生方不需要关心谁来使用数据，只需要将数据发送到消息队列，数据使用方直接在消 息队列中直接获取数据即可。
+互联网公司的大促场景(双十一、店庆活动、秒杀活动)都会使用到 MQ。</p> <div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR;  
+　　用户--&gt;A系统--&gt;mysql;
+　　订单系统--&gt;MQ--&gt;物流系统;
+　　订单系统--&gt;MQ--&gt;库存系统; 
+</code></pre></div><h3 id="数据分发"><a href="#数据分发" class="header-anchor">#</a> 数据分发</h3> <p>通过消息队列可以让数据在多个系统更加之间进行流通。数据的产生方不需要关心谁来使用数据，只需要将数据发送到消息队列，数据使用方直接在消 息队列中直接获取数据即可。
 接口调用的弊端，无论是新增系统，还是移除系统，代码改造工作量都很大。
 使用 MQ 做数据分发好处，无论是新增系统，还是移除系统，代码改造工作量较小。 所以使用 MQ 做数据的分发，可以提高团队开发的效率。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/java/concurrent/concurrent-started.html" class="prev">
         一级
       </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.04277f03.js" defer></script><script src="/assets/js/2.1bea7c4b.js" defer></script><script src="/assets/js/13.b8e7eb0d.js" defer></script>
+    <script src="/assets/js/app.da9c1cde.js" defer></script><script src="/assets/js/2.1bea7c4b.js" defer></script><script src="/assets/js/13.dc592298.js" defer></script>
   </body>
 </html>
