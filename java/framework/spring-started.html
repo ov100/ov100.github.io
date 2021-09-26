@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.d693756f.js" as="script"><link rel="preload" href="/assets/js/2.6edc59a2.js" as="script"><link rel="preload" href="/assets/js/12.60e43e77.js" as="script"><link rel="prefetch" href="/assets/js/10.5dc94777.js"><link rel="prefetch" href="/assets/js/11.cbb027a8.js"><link rel="prefetch" href="/assets/js/13.712bddee.js"><link rel="prefetch" href="/assets/js/14.da7b35e1.js"><link rel="prefetch" href="/assets/js/3.b5c6a038.js"><link rel="prefetch" href="/assets/js/4.00c04b5f.js"><link rel="prefetch" href="/assets/js/5.14597a40.js"><link rel="prefetch" href="/assets/js/6.b2615aea.js"><link rel="prefetch" href="/assets/js/7.eaefc2d8.js"><link rel="prefetch" href="/assets/js/8.98023447.js"><link rel="prefetch" href="/assets/js/9.79b9546a.js">
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.cb5f77a6.js" as="script"><link rel="preload" href="/assets/js/2.6edc59a2.js" as="script"><link rel="preload" href="/assets/js/12.91e268e5.js" as="script"><link rel="prefetch" href="/assets/js/10.4a61a419.js"><link rel="prefetch" href="/assets/js/11.61d5706f.js"><link rel="prefetch" href="/assets/js/13.712bddee.js"><link rel="prefetch" href="/assets/js/14.efca92fb.js"><link rel="prefetch" href="/assets/js/3.b5c6a038.js"><link rel="prefetch" href="/assets/js/4.00c04b5f.js"><link rel="prefetch" href="/assets/js/5.14597a40.js"><link rel="prefetch" href="/assets/js/6.b2615aea.js"><link rel="prefetch" href="/assets/js/7.eaefc2d8.js"><link rel="prefetch" href="/assets/js/8.98023447.js"><link rel="prefetch" href="/assets/js/9.79b9546a.js">
     <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
   </head>
   <body>
@@ -21,11 +21,7 @@
 而且他是只能针对接口编程的.</p></li> <li><p><strong>CGLIB动态代理</strong>是基于继承机制,继承被代理类,所以方法不要声明为final,然后重写父类方法达到增强了类的作用.
 它底层是基于asm第三方框架,是对代理对象类的class文件加载进来,通过修改其字节码生成子类来处理.
 生成类的速度慢,但是后续执行类的操作时候很快.</p></li></ul> <blockquote><p>如果目标对象实现了接口,默认情况下是采用JDK动态实现AOP
-如果目标对象没有实现接口,必须采用CGLIB库.</p></blockquote> <h2 id="反射"><a href="#反射" class="header-anchor">#</a> 反射</h2> <p><strong>什么是反射</strong></p> <ul><li>可以在运行时期动态获取任何类的信息,如属性和方法.</li> <li>可以在运行时期动态调用任何类的属性和方法.</li> <li>动态调用获取信息和动态调用类的方法叫做反射.</li></ul> <p><strong>优点</strong>
-反射可以动态访问和调用类的方法和属性,而不局限于硬编码.提高了程序的扩展性,降低耦合度.允许程序创建可控制任何对象.</p> <p><strong>缺点</strong>
-性能问题
-内部暴露问题,因为可以访问私有变量,出现问题</p> <p><strong>问题</strong></p> <blockquote><p>Java反射机制可以动态修改实例中final修饰的成员变量吗？
-回答是分两种情况的。</p></blockquote> <ul><li>当final修饰的成员变量在<strong>定义的时候就初始化了值</strong>，那么java反射机制就已经不能动态修改它的值了。</li> <li>当final修饰的成员变量在定义的时候并<strong>没有初始化值</strong>的话，那么就还能通过java反射机制来动态修改它的值。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+如果目标对象没有实现接口,必须采用CGLIB库.</p></blockquote> <h2 id="反射"><a href="#反射" class="header-anchor">#</a> 反射</h2> <p><strong>什么是反射</strong></p> <ul><li>可以在运行时期动态获取任何类的信息,如属性和方法.</li> <li>可以在运行时期动态调用任何类的属性和方法.</li> <li>动态调用获取信息和动态调用类的方法叫做反射.</li></ul> <p><strong>优点</strong></p> <ul><li>反射可以动态访问和调用类的方法和属性,而不局限于硬编码.提高了程序的扩展性,降低耦合度.允许程序创建可控制任何对象.</li></ul> <p><strong>缺点</strong></p> <ul><li>性能问题</li> <li>内部暴露问题,因为可以访问私有变量,出现问题</li></ul> <p><strong>问题1</strong>：Java反射机制可以动态修改实例中final修饰的成员变量吗？</p> <ul><li>回答是分两种情况的。</li> <li>当final修饰的成员变量在<strong>定义的时候就初始化了值</strong>，那么java反射机制就已经不能动态修改它的值了。</li> <li>当final修饰的成员变量在定义的时候并<strong>没有初始化值</strong>的话，那么就还能通过java反射机制来动态修改它的值。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/java/base/volatile.html" class="prev">
         volatile
@@ -34,6 +30,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.d693756f.js" defer></script><script src="/assets/js/2.6edc59a2.js" defer></script><script src="/assets/js/12.60e43e77.js" defer></script>
+    <script src="/assets/js/app.cb5f77a6.js" defer></script><script src="/assets/js/2.6edc59a2.js" defer></script><script src="/assets/js/12.91e268e5.js" defer></script>
   </body>
 </html>
